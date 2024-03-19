@@ -1,0 +1,12 @@
+Attribute points to give : {{maxAttributionPoint}}
+<button (click)="RollRandomStats()">Roll random stats</button>
+<button (click)="Reset()">Reset</button>
+<div>
+    Strength: <button (click)="ManagePoint('strength', false)">-</button> {{strength}} <button (click)="ManagePoint('strength', true)">+</button>
+    Dexterity: <button (click)="ManagePoint('dexterity', false)">-</button> {{dexterity}} <button (click)="ManagePoint('dexterity', true)">+</button>
+    Constitution: <button (click)="ManagePoint('constitution', false)">-</button> {{constitution}} <button (click)="ManagePoint('constitution', true)">+</button>
+    Intelligence: <button (click)="ManagePoint('intelligence', false)">-</button> {{intelligence}} <button (click)="ManagePoint('intelligence', true)">+</button>
+    Wisdom: <button (click)="ManagePoint('wisdom', false)">-</button> {{wisdom}} <button (click)="ManagePoint('wisdom', true)">+</button>
+    Charisma: <button (click)="ManagePoint('charisma', false)">-</button> {{charisma}} <button (click)="ManagePoint('charisma', true)">+</button>
+</div>
+<button (click)="SetStats()" routerLink="/characterFile">Submit</button>

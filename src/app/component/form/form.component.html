@@ -1,0 +1,27 @@
+<form [formGroup]="fg">
+    <label for="name" (click)="clicked()">Name</label>
+    <input type="name" id="name" formControlName="name">
+    <p class="error" *ngIf="name && name.touched && name.errors?.['required']">name is required</p>
+    <label for="race">Race</label>
+    <select id="race">
+        <option *ngFor="let race of races">{{race.name}}</option>
+    </select>
+    <label for="classe">Classe</label>
+    <select id="classe">
+        <option *ngFor="let classe of classes">{{classe.name}}</option>
+    </select>
+    <label for="background">Background</label>
+    <select id="background">
+        <option *ngFor="let background of backgrounds">{{background.name}}</option>
+    </select>
+    <label for="alignement">Alignement</label>
+    <select id="alignement">
+        <option *ngFor="let alignement of alignements">{{alignement.label}}</option>
+    </select>
+    <label for="playersName" (click)="clicked()">playersName</label>
+    <input type="playersName" id="playersName" formControlName="playersName">
+    <p class="error" *ngIf="playersName && playersName.touched && playersName.errors?.['required']">playersName is required</p>
+    <label for="exp" (click)="clicked()">exp</label>
+    <input type="exp" id="exp" formControlName="exp">
+    <p class="error" *ngIf="exp && exp.touched && exp.errors?.['required']">exp is required</p>
+</form>
